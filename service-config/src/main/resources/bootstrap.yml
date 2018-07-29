@@ -1,0 +1,29 @@
+server:
+  port: 8765
+spring:
+   application:
+      name: config-service
+   cloud:
+      config:
+        label: master
+        server:
+          git:
+            uri: https://code.aliyun.com/quboka/config-service.git
+            search-paths: V1-DEV  # git仓库地址下的相对地址，可以配置多个，用,分割。
+            username:
+            password:
+   rabbitmq:
+      host: 10.1.24.169
+      port: 5672
+      username: admin
+      password: admin
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  bus-refresh

@@ -1,0 +1,35 @@
+server:
+  port: 8766
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8765/
+      name: config
+    bus:
+      trace:
+         enabled: true
+  rabbitmq:
+        host: 10.1.24.169
+        port: 5672
+        username: admin
+        password: admin
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8761/eureka/
+
+
+
+
+
+
+
+
+
+
+
+

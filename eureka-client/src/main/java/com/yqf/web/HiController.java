@@ -15,8 +15,9 @@ public class HiController {
     String port;
     @GetMapping("/hi")
     public String home(@RequestParam String name) {
+        System.out.println(name);
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

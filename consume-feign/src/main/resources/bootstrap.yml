@@ -7,11 +7,32 @@ server:
 spring:
    application:
      name: consume-feign
+
 feign:
+  #是否开启熔断器
   hystrix:
     enabled: true
 
-hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 10000
+#feign熔断超时时间还必须设置ribbon时间才能生效
+ribbon:
+  #请求处理的超时时间
+  ReadTimeout: 120000
+  #请求连接的超时时间
+  ConnectTimeout: 30000
+
+hystrix:
+  command:
+    default:
+      execution:
+        #是否开启超时熔断, 如果为false, 则熔断机制只在服务不可用时开启
+        timeout:
+          enabled: true
+        # 设置超时熔断时间
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+
 
 #management:
 #  endpoints:

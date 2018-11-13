@@ -3,11 +3,16 @@ server:
 eureka:
   server:
     enable-self-preservation: false # 关闭自我保护模式（缺省为打开）
-    eviction-interval-timer-in-ms: 1000 # 续期时间，即扫描失效服务的间隔时间(毫秒)
+    eviction-interval-timer-in-ms: 5000 # 续期时间，即扫描失效服务的间隔时间(毫秒)
   instance:
     hostname: localhost
+    lease-renewal-interval-in-seconds: 5 #心跳时间
+    lease-expiration-duration-in-seconds: 10 #10秒内未发送心跳就被清除
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
+

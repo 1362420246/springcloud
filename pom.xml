@@ -13,6 +13,8 @@
         <module>eureka-client</module>
         <module>eureka-server</module>
         <module>eurekaclient2</module>
+        <module>consume-feign</module>
+        <module>common-api</module>
     </modules>
 
     <parent>
@@ -67,6 +69,15 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!-- Maven Install 跳过Test阶段 Start -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <!-- Maven Install 跳过Test阶段 End -->
         </plugins>
     </build>
 

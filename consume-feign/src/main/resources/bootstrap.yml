@@ -16,7 +16,7 @@ feign:
 #feign熔断超时时间还必须设置ribbon时间才能生效
 ribbon:
   #请求处理的超时时间
-  ReadTimeout: 120000
+  ReadTimeout: 30000
   #请求连接的超时时间
   ConnectTimeout: 30000
 
@@ -30,7 +30,8 @@ hystrix:
         # 设置超时熔断时间
         isolation:
           thread:
-            timeoutInMilliseconds: 10000
+            #熔断时间一定要大于ribbon超时时间
+            timeoutInMilliseconds: 60000
 
 
 

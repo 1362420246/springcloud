@@ -6,18 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="config-client" />
+        <module name="common-api" />
         <module name="consume-feign" />
         <module name="eureka-client" />
-        <module name="eureka-consume" />
         <module name="eureka-server" />
-        <module name="eureka-zuul" />
         <module name="eurekaclient2" />
         <module name="rabbitmq-sender" />
         <module name="service-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="common-api" target="1.5" />
       <module name="config-client" target="1.8" />
       <module name="consume-feign" target="1.8" />
       <module name="eureka-client" target="1.8" />

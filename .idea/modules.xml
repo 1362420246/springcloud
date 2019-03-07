@@ -3,10 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/common-api/common-api.iml" filepath="$PROJECT_DIR$/common-api/common-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-client/config-client.iml" filepath="$PROJECT_DIR$/config-client/config-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/consume-feign/consume-feign.iml" filepath="$PROJECT_DIR$/consume-feign/consume-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-consume/eureka-consume.iml" filepath="$PROJECT_DIR$/eureka-consume/eureka-consume.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-demos.iml" filepath="$PROJECT_DIR$/eureka-demos.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-zuul/eureka-zuul.iml" filepath="$PROJECT_DIR$/eureka-zuul/eureka-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurekaclient2/eurekaclient2.iml" filepath="$PROJECT_DIR$/eurekaclient2/eurekaclient2.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-sender/rabbitmq-sender.iml" filepath="$PROJECT_DIR$/rabbitmq-sender/rabbitmq-sender.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-config/service-config.iml" filepath="$PROJECT_DIR$/service-config/service-config.iml" />

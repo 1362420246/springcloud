@@ -11,7 +11,7 @@ public class HiSendImpl implements HiSend {
 
     @Override
     public String sayHiFromClientOne(String name) {
-        return "异常！";
+        return "上级服务连接异常，熔断！";
     }
 
 }

@@ -15,6 +15,11 @@
         <module>eurekaclient2</module>
         <module>consume-feign</module>
         <module>common-api</module>
+        <module>rabbitmq-sender</module>
+        <module>service-config</module>
+        <module>eureka-zuul</module>
+        <module>eureka-consume</module>
+        <module>config-client</module>
     </modules>
 
     <parent>

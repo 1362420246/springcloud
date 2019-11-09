@@ -22,6 +22,7 @@ public class FeignController {
     @RequestMapping("/{id}")
     public String testFegin(@PathVariable("id")String id) {
         System.out.println("消费者："+id);
+        System.out.println(Thread.currentThread().getName());
         return feignService.testFegin(id);
     }
 

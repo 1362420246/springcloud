@@ -29,11 +29,10 @@ hystrix:
           enabled: true
         # 设置超时熔断时间
         isolation:
+          #strategy: SEMAPHORE #改默认隔离策略为信号量模式 （Hystrix的默认隔离策略是Thread(线程隔离策略), 因此转发拦截器内是无法获取到请求的请求头信息的）
           thread:
             #熔断时间一定要大于ribbon超时时间
             timeoutInMilliseconds: 60000
-
-
 
 #management:
 #  endpoints:

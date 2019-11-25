@@ -1,14 +1,13 @@
 package com.yqf.web;
 
 import com.qbk.api.FeignApi;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author: quboka
@@ -34,5 +33,21 @@ public class FeignController implements FeignApi {
         System.out.println("header:" + name);
         System.out.println("生产者："+id);
         return id;
+    }
+
+    @PostMapping("/post")
+    public Map<String,String> post(String id){
+        System.out.println(id);
+        Map<String,String> map = new HashMap<>();
+        map.put("code","200");
+        return map;
+    }
+
+    @PostMapping("/postbody")
+    public Map<String,String> postbody(@RequestBody Map<String,Object> paras){
+        System.out.println(paras);
+        Map<String,String> map = new HashMap<>();
+        map.put("code","200");
+        return map;
     }
 }

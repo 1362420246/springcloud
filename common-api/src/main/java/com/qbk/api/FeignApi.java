@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface FeignApi {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String testFegin(@PathVariable("id")String id );
+    String testFegin(@PathVariable("id")String id );
 
 
 

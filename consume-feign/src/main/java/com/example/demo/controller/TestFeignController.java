@@ -19,6 +19,7 @@ public class TestFeignController {
 
     @GetMapping("/getHi")
     public  String getHi(){
+        System.out.println(Thread.currentThread().getName());
         return testFeignService.getHi("qubokakaka");
     };
 
